@@ -1,0 +1,15 @@
+{
+    "name": "myinternship/myinternship-project",
+    "description": "Projet developpement web",
+    "type": "project",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Fabiola"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
