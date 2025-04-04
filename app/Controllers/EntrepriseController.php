@@ -73,6 +73,8 @@ class EntrepriseController extends Controller {
         // Vérifier que l'utilisateur est administrateur ou pilote
         Middleware::checkAdminOrPilote();
         global $pdo;
+
+        $pdo = Database::getInstance();
         
         if (!isset($_GET['id'])) {
             header("Location:  $BASE_URL./index.php?controller=entreprise&action=list");

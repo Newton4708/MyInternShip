@@ -20,6 +20,12 @@
             <li><a href="<?= BASE_URL ?>/public/index.php?controller=offre&action=list">Offres</a></li>
             <li><a href="<?= BASE_URL ?>/public/index.php?controller=entreprise&action=list">Entreprises</a></li>
             <li><a href="#">Contact</a></li>
+            <!-- bouton de deconnexion si user dans session -->
+            <?php if (isset($_SESSION['user'])): ?>
+              <li><a href="<?= BASE_URL ?>/public/index.php?controller=auth&action=logout">Déconnexion</a></li>
+            <?php else: ?>
+              <li><a href="<?= BASE_URL ?>/public/index.php?controller=auth&action=loginForm">Connexion</a></li>
+            <?php endif; ?>
           </ul>
         </nav>
       </div>
